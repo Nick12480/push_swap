@@ -6,7 +6,7 @@
 /*   By: mverzilo <mverzilo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:37:56 by mverzilo          #+#    #+#             */
-/*   Updated: 2025/12/28 12:25:06 by mverzilo         ###   ########.fr       */
+/*   Updated: 2026/01/02 15:21:49 by mverzilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ t_stack	*parse_argument(int argc, char **argv)
 		i++;
 	}
 	return (stack_a);
-
 }
 
 int	process_argument(char *arg, t_stack **stack)
@@ -60,19 +59,6 @@ int	process_numbers(char **numbers, t_stack **stack)
 	return (1);
 }
 
-int	validate_and_add(char *str, t_stack **stack)
-{
-	long	num;
-
-	if (!is_valid_number(str))
-		return (0);
-	num = ft_atoi(str);
-	if (num < INT_MIN || num > INT_MAX)
-		return (0);
-	add_to_stack(stack, (int)num);
-	return (1);
-}
-
 void	addto_stack(t_stack **stack, int value)
 {
 	t_stack	*new;
@@ -80,7 +66,7 @@ void	addto_stack(t_stack **stack, int value)
 
 	new = (t_stack *)malloc(sizeof(t_stack));
 	if (!new)
-		return (0);
+		return ;
 	new->value = value;
 	new->index = -1;
 	new->next = NULL;
@@ -93,4 +79,17 @@ void	addto_stack(t_stack **stack, int value)
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new;
+}
+
+int	validate_and_add(char *str, t_stack **stack)
+{
+	long	num;
+
+	if (!is_valid_number(str))
+		return (0);
+	num = ft_atol(str);
+	if (num < INT_MIN || num > INT_MAX)
+		return (0);
+	addto_stack(stack, (int)num);
+	return (1);
 }

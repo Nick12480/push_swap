@@ -6,7 +6,7 @@
 /*   By: mverzilo <mverzilo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 16:18:38 by mverzilo          #+#    #+#             */
-/*   Updated: 2025/12/28 11:52:42 by mverzilo         ###   ########.fr       */
+/*   Updated: 2025/12/28 13:00:41 by mverzilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	free_split(char **strs)
 		free(strs[i]);
 		i++;
 	}
+	free(strs);
 }
 
 int	is_valid_number(char *str)

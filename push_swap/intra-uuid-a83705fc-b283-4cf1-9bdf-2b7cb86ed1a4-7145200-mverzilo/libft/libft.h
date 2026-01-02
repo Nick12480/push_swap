@@ -6,7 +6,7 @@
 /*   By: mverzilo <mverzilo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 14:13:28 by mverzilo          #+#    #+#             */
-/*   Updated: 2025/12/12 20:46:46 by mverzilo         ###   ########.fr       */
+/*   Updated: 2026/01/02 15:46:36 by mverzilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@
 #  define BUFFER_SIZE 42
 # endif
 
-#include <limits.h>
-#include <unistd.h>
-#include <aio.h>
-#include <string.h>
-#include <bsd/string.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <fcntl.h>
-#include <stdlib.h>
+# include <limits.h>
+# include <unistd.h>
+# include <aio.h>
+# include <string.h>
+# include <bsd/string.h>
+# include <stdio.h>
+# include <stdint.h>
+# include <fcntl.h>
+# include <stdlib.h>
 
 // get_next_line
-char				*get_next_line(int fd);
-char				*strchr_gnl(const char *str, char c);
-char				*strjoi_gnl(char *str1, char *str2);
-int					strlen_gnl(char *str);
-char				*strdup_gnl(char *s);
+// char				*get_next_line(int fd);
+// char				*strchr_gnl(const char *str, char c);
+// char				*strjoi_gnl(char *str1, char *str2);
+// int					strlen_gnl(char *str);
+// char				*strdup_gnl(char *s);
 
 typedef struct s_list
 {
@@ -95,6 +95,7 @@ void				*ft_calloc(size_t count, size_t size);
 // conversion functions
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+long				ft_atol(const char *str);
 
 // ptintf
 int					ft_printf(const char *str, ...);
