@@ -6,7 +6,7 @@
 /*   By: mverzilo <mverzilo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 17:24:52 by mverzilo          #+#    #+#             */
-/*   Updated: 2026/01/02 15:59:21 by mverzilo         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:18:20 by mverzilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ void	seleckt_algorithm(t_stack **a, t_stack **b)
 	{
 		sort_three(a);
 	}
+	if (size == 4)
+	{
+		
+	}
+	
 	if (size == 5)
 	{
 		sort_five(a, b);

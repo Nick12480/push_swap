@@ -6,7 +6,7 @@
 /*   By: mverzilo <mverzilo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:19:14 by mverzilo          #+#    #+#             */
-/*   Updated: 2026/01/02 15:53:24 by mverzilo         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:19:16 by mverzilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,12 @@ int		get_stack_size(t_stack *stack);
 void	index_stack(t_stack *a);
 void	seleckt_algorithm(t_stack **a, t_stack **b);
 
-//push_swap_sort_three_five_uten
+//push_swap_sort_three_four_five
 void	sort_three(t_stack **a);
 int		find_min_position(t_stack *stack);
 void	move_min_to_top(t_stack **stack);
 void	sort_five(t_stack **a, t_stack **b);
+void	sort_four(t_stack **a, t_stack **b);
 
 //Sorting algorithm "Turk"
 // void	turk_sort(t_stack **a, t_stack **b);
